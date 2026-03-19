@@ -247,19 +247,6 @@ function ServicesSection() {
       cta: "Secure Your Retirement",
       highlight: true,
     },
-    {
-      title: "Health & Supplemental",
-      subtitle: "Health, Disability, & Long-Term Care",
-      features: [
-        "Comprehensive health coverage",
-        "Disability income protection",
-        "Long-term care planning",
-        "Critical illness coverage",
-        "Medicare supplement plans",
-      ],
-      cta: "Get Covered Today",
-      highlight: false,
-    },
   ];
 
   return (
@@ -282,7 +269,7 @@ function ServicesSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
