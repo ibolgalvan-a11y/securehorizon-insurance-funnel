@@ -72,6 +72,46 @@ export async function POST(request: NextRequest) {
   }
 }
 
+export async function PATCH(request: NextRequest) {
+  try {
+    const { id, status } = await request.json();
+
+    if (!id || !status) {
+      return NextResponse.json(
+        { error: "Missing id or status" },
+        { status: 400 }
+      );
+    }
+
+    const validStatuses = ["new", "contacted", "converted", "lost"];
+    if (!validStatuses.includes(status)) {
+      return NextResponse.json(
+        { error: "Invalid status" },
+        { status: 400 }
+      );
+    }
+
+    const { error } = await supabase
+      .from("leads")
+      .update({ status })
+      .eq("id", id);
+
+    if (error) {
+      return NextResponse.json(
+        { error: "Failed to update lead" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
+
 export async function GET() {
   try {
     const { data: leads, error } = await supabase
