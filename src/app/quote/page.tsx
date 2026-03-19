@@ -303,10 +303,6 @@ function Step1({
   const coverageOptions = [
     { value: "life", label: "Life Insurance", emoji: "🛡️" },
     { value: "annuity", label: "Annuities", emoji: "📈" },
-    { value: "health", label: "Health Insurance", emoji: "❤️" },
-    { value: "disability", label: "Disability", emoji: "🏥" },
-    { value: "longterm", label: "Long-Term Care", emoji: "🏠" },
-    { value: "medicare", label: "Medicare Supplement", emoji: "💊" },
   ];
 
   const goals = [

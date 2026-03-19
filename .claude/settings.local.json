@@ -12,7 +12,12 @@
       "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" --version)",
       "Bash(cmd.exe //c \"where node\")",
       "Bash(export PATH=\"$PATH:/c/Program Files/nodejs\")",
-      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI:/c/Program Files \\(x86\\)/GitHub CLI\")"
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI:/c/Program Files \\(x86\\)/GitHub CLI\")",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh repo:*)",
+      "Bash(npm install:*)",
+      "mcp__97b17ac1-fb60-4378-a407-4990dfef8fab__deploy_to_vercel",
+      "Bash(npx vercel:*)"
     ]
   }
 }
