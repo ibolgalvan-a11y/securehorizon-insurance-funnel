@@ -153,14 +153,14 @@ export default function QuotePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-brand-800 to-brand-900">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-brand-800 mb-3">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Get Your Free Personalized Quote
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-400 text-lg">
             Answer a few quick questions and we&apos;ll match you with the best
             coverage options.
           </p>
@@ -174,8 +174,8 @@ export default function QuotePage() {
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                     i <= step
-                      ? "bg-brand-500 text-white shadow-lg"
-                      : "bg-gray-200 text-gray-400"
+                      ? "bg-gold-500 text-brand-900 shadow-lg shadow-gold-500/20"
+                      : "bg-brand-700 text-gray-500"
                   }`}
                 >
                   {i < step ? (
@@ -186,7 +186,7 @@ export default function QuotePage() {
                 </div>
                 <span
                   className={`text-xs mt-2 font-medium ${
-                    i <= step ? "text-brand-500" : "text-gray-400"
+                    i <= step ? "text-gold-400" : "text-gray-500"
                   }`}
                 >
                   {s.label}
@@ -195,7 +195,7 @@ export default function QuotePage() {
               {i < steps.length - 1 && (
                 <div
                   className={`w-12 sm:w-20 h-0.5 mx-2 mb-6 ${
-                    i < step ? "bg-brand-500" : "bg-gray-200"
+                    i < step ? "bg-gold-500" : "bg-brand-700"
                   }`}
                 />
               )}
@@ -204,7 +204,7 @@ export default function QuotePage() {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10 border border-gray-100">
+        <div className="bg-brand-700 rounded-2xl shadow-xl p-8 sm:p-10 border border-gold-500/10">
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -234,11 +234,11 @@ export default function QuotePage() {
           </AnimatePresence>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-10 pt-6 border-t border-gray-100">
+          <div className="flex justify-between items-center mt-10 pt-6 border-t border-gold-500/10">
             {step > 0 ? (
               <button
                 onClick={handleBack}
-                className="flex items-center gap-2 text-gray-500 hover:text-brand-500 font-medium transition-colors"
+                className="flex items-center gap-2 text-gray-400 hover:text-gold-400 font-medium transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back
@@ -248,7 +248,7 @@ export default function QuotePage() {
             )}
 
             {step < 3 ? (
-              <button onClick={handleNext} className="btn-primary flex items-center gap-2">
+              <button onClick={handleNext} className="btn-gold flex items-center gap-2">
                 Continue
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -272,13 +272,13 @@ export default function QuotePage() {
         </div>
 
         {/* Trust signals */}
-        <div className="flex flex-wrap justify-center gap-6 mt-8 text-gray-400 text-sm">
+        <div className="flex flex-wrap justify-center gap-6 mt-8 text-gray-500 text-sm">
           <span className="flex items-center gap-2">
-            <Lock className="w-4 h-4" />
+            <Lock className="w-4 h-4 text-gold-400" />
             256-bit SSL Encrypted
           </span>
           <span className="flex items-center gap-2">
-            <Shield className="w-4 h-4" />
+            <Shield className="w-4 h-4 text-gold-400" />
             We never sell your data
           </span>
         </div>
@@ -316,10 +316,10 @@ function Step1({
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-brand-800 mb-2">
+      <h2 className="text-2xl font-bold text-white mb-2">
         What Coverage Are You Interested In?
       </h2>
-      <p className="text-gray-500 mb-8">Select all that apply</p>
+      <p className="text-gray-400 mb-8">Select all that apply</p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
         {coverageOptions.map((opt) => (
@@ -328,8 +328,8 @@ function Step1({
             onClick={() => toggleCoverageType(opt.value)}
             className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
               form.coverageTypes.includes(opt.value)
-                ? "border-brand-500 bg-brand-50 text-brand-700"
-                : "border-gray-200 hover:border-gray-300 text-gray-600"
+                ? "border-gold-500 bg-gold-500/10 text-gold-400"
+                : "border-brand-600 hover:border-brand-500 text-gray-400"
             }`}
           >
             <span className="text-2xl block mb-1">{opt.emoji}</span>
@@ -338,10 +338,10 @@ function Step1({
         ))}
       </div>
       {errors.coverageTypes && (
-        <p className="text-red-500 text-sm mb-4">{errors.coverageTypes}</p>
+        <p className="text-red-400 text-sm mb-4">{errors.coverageTypes}</p>
       )}
 
-      <h3 className="text-lg font-semibold text-brand-800 mb-4">
+      <h3 className="text-lg font-semibold text-white mb-4">
         What&apos;s your primary goal?
       </h3>
       <div className="space-y-3">
@@ -350,8 +350,8 @@ function Step1({
             key={goal}
             className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
               form.primaryGoal === goal
-                ? "border-brand-500 bg-brand-50"
-                : "border-gray-200 hover:border-gray-300"
+                ? "border-gold-500 bg-gold-500/10"
+                : "border-brand-600 hover:border-brand-500"
             }`}
           >
             <input
@@ -360,14 +360,14 @@ function Step1({
               value={goal}
               checked={form.primaryGoal === goal}
               onChange={(e) => updateField("primaryGoal", e.target.value)}
-              className="w-4 h-4 text-brand-500"
+              className="w-4 h-4 text-gold-500"
             />
-            <span className="text-gray-700 font-medium">{goal}</span>
+            <span className="text-gray-300 font-medium">{goal}</span>
           </label>
         ))}
       </div>
       {errors.primaryGoal && (
-        <p className="text-red-500 text-sm mt-2">{errors.primaryGoal}</p>
+        <p className="text-red-400 text-sm mt-2">{errors.primaryGoal}</p>
       )}
     </div>
   );
@@ -384,64 +384,64 @@ function Step2({
 }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-brand-800 mb-2">
+      <h2 className="text-2xl font-bold text-white mb-2">
         How Can We Reach You?
       </h2>
-      <p className="text-gray-500 mb-8">
+      <p className="text-gray-400 mb-8">
         We&apos;ll use this info to send your personalized quote
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="form-label">First Name *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">First Name *</label>
           <input
             type="text"
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white placeholder-gray-500 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             placeholder="John"
             value={form.firstName}
             onChange={(e) => updateField("firstName", e.target.value)}
           />
           {errors.firstName && (
-            <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>
           )}
         </div>
         <div>
-          <label className="form-label">Last Name *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Last Name *</label>
           <input
             type="text"
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white placeholder-gray-500 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             placeholder="Smith"
             value={form.lastName}
             onChange={(e) => updateField("lastName", e.target.value)}
           />
           {errors.lastName && (
-            <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
           )}
         </div>
         <div>
-          <label className="form-label">Email Address *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Email Address *</label>
           <input
             type="email"
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white placeholder-gray-500 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             placeholder="john@example.com"
             value={form.email}
             onChange={(e) => updateField("email", e.target.value)}
           />
           {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.email}</p>
           )}
         </div>
         <div>
-          <label className="form-label">Phone Number *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Phone Number *</label>
           <input
             type="tel"
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white placeholder-gray-500 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             placeholder="(555) 123-4567"
             value={form.phone}
             onChange={(e) => updateField("phone", e.target.value)}
           />
           {errors.phone && (
-            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
           )}
         </div>
       </div>
@@ -460,18 +460,18 @@ function Step3({
 }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-brand-800 mb-2">
+      <h2 className="text-2xl font-bold text-white mb-2">
         Tell Us About Yourself
       </h2>
-      <p className="text-gray-500 mb-8">
+      <p className="text-gray-400 mb-8">
         This helps us recommend the most relevant options for your situation
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="form-label">Age Range *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Age Range *</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.age}
             onChange={(e) => updateField("age", e.target.value)}
           >
@@ -484,14 +484,14 @@ function Step3({
             <option value="65+">65+</option>
           </select>
           {errors.age && (
-            <p className="text-red-500 text-sm mt-1">{errors.age}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.age}</p>
           )}
         </div>
 
         <div>
-          <label className="form-label">Marital Status *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Marital Status *</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.maritalStatus}
             onChange={(e) => updateField("maritalStatus", e.target.value)}
           >
@@ -503,14 +503,14 @@ function Step3({
             <option value="domestic-partner">Domestic Partner</option>
           </select>
           {errors.maritalStatus && (
-            <p className="text-red-500 text-sm mt-1">{errors.maritalStatus}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.maritalStatus}</p>
           )}
         </div>
 
         <div>
-          <label className="form-label">Number of Dependents</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Number of Dependents</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.dependents}
             onChange={(e) => updateField("dependents", e.target.value)}
           >
@@ -524,9 +524,9 @@ function Step3({
         </div>
 
         <div>
-          <label className="form-label">Employment Status</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Employment Status</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.employmentStatus}
             onChange={(e) => updateField("employmentStatus", e.target.value)}
           >
@@ -554,18 +554,18 @@ function Step4({
 }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-brand-800 mb-2">
+      <h2 className="text-2xl font-bold text-white mb-2">
         Your Needs & Preferences
       </h2>
-      <p className="text-gray-500 mb-8">
+      <p className="text-gray-400 mb-8">
         Almost done! This helps us tailor your recommendations.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="form-label">Annual Household Income *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Annual Household Income *</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.annualIncome}
             onChange={(e) => updateField("annualIncome", e.target.value)}
           >
@@ -579,14 +579,14 @@ function Step4({
             <option value="250k+">$250,000+</option>
           </select>
           {errors.annualIncome && (
-            <p className="text-red-500 text-sm mt-1">{errors.annualIncome}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.annualIncome}</p>
           )}
         </div>
 
         <div>
-          <label className="form-label">Do You Have Current Coverage?</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Do You Have Current Coverage?</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.currentCoverage}
             onChange={(e) => updateField("currentCoverage", e.target.value)}
           >
@@ -600,9 +600,9 @@ function Step4({
         </div>
 
         <div>
-          <label className="form-label">Monthly Budget for Coverage</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Monthly Budget for Coverage</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.budgetRange}
             onChange={(e) => updateField("budgetRange", e.target.value)}
           >
@@ -617,9 +617,9 @@ function Step4({
         </div>
 
         <div>
-          <label className="form-label">When Do You Need Coverage? *</label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">When Do You Need Coverage? *</label>
           <select
-            className="input-field"
+            className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200"
             value={form.timeframe}
             onChange={(e) => updateField("timeframe", e.target.value)}
           >
@@ -631,17 +631,17 @@ function Step4({
             <option value="exploring">Just exploring options</option>
           </select>
           {errors.timeframe && (
-            <p className="text-red-500 text-sm mt-1">{errors.timeframe}</p>
+            <p className="text-red-400 text-sm mt-1">{errors.timeframe}</p>
           )}
         </div>
       </div>
 
       <div className="mt-6">
-        <label className="form-label">
+        <label className="block text-sm font-semibold text-gray-300 mb-2">
           Anything else you&apos;d like us to know?
         </label>
         <textarea
-          className="input-field min-h-[100px] resize-y"
+          className="w-full px-4 py-3 rounded-lg border-2 border-brand-600 bg-brand-800 text-white placeholder-gray-500 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all duration-200 min-h-[100px] resize-y"
           placeholder="Tell us about any specific concerns, health conditions, or questions you have..."
           value={form.additionalNotes}
           onChange={(e) => updateField("additionalNotes", e.target.value)}
