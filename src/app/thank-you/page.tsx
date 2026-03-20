@@ -22,7 +22,7 @@ const stagger = {
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-brand-800 to-brand-900">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <motion.div
           className="text-center"
@@ -31,21 +31,21 @@ export default function ThankYouPage() {
           variants={stagger}
         >
           <motion.div variants={fadeIn}>
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-12 h-12 text-green-500" />
+            <div className="w-20 h-20 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="w-12 h-12 text-gold-400" />
             </div>
           </motion.div>
 
           <motion.h1
             variants={fadeIn}
-            className="text-3xl sm:text-4xl font-bold text-brand-800 mb-4"
+            className="text-3xl sm:text-4xl font-bold text-white mb-4"
           >
             You&apos;re One Step Closer to Protection!
           </motion.h1>
 
           <motion.p
             variants={fadeIn}
-            className="text-xl text-gray-600 mb-12 max-w-xl mx-auto"
+            className="text-xl text-gray-400 mb-12 max-w-xl mx-auto"
           >
             Thank you for trusting us with your information. A licensed advisor
             will reach out within 24 hours with your personalized recommendations.
@@ -53,28 +53,28 @@ export default function ThankYouPage() {
         </motion.div>
 
         <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 sm:p-10 border border-gray-100 mb-10"
+          className="bg-brand-700 rounded-2xl shadow-xl p-8 sm:p-10 border border-gold-500/10 mb-10"
           initial="hidden"
           animate="visible"
           variants={stagger}
         >
           <motion.h2
             variants={fadeIn}
-            className="text-xl font-bold text-brand-800 mb-6"
+            className="text-xl font-bold text-white mb-6"
           >
             What Happens Next?
           </motion.h2>
 
           <div className="space-y-6">
             <motion.div variants={fadeIn} className="flex gap-4">
-              <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Clock className="w-5 h-5 text-brand-500" />
+              <div className="w-10 h-10 bg-gold-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Clock className="w-5 h-5 text-gold-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-brand-800">
+                <h3 className="font-semibold text-white">
                   Within 24 Hours
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   A licensed insurance advisor reviews your information and
                   prepares personalized coverage options tailored to your needs
                   and budget.
@@ -83,14 +83,14 @@ export default function ThankYouPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="flex gap-4">
-              <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Phone className="w-5 h-5 text-brand-500" />
+              <div className="w-10 h-10 bg-gold-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Phone className="w-5 h-5 text-gold-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-brand-800">
+                <h3 className="font-semibold text-white">
                   Free Consultation Call
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   We&apos;ll schedule a convenient time to walk you through your
                   options — no pressure, no sales pitch. Just honest advice.
                 </p>
@@ -98,14 +98,14 @@ export default function ThankYouPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="flex gap-4">
-              <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-brand-500" />
+              <div className="w-10 h-10 bg-gold-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 text-gold-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-brand-800">
+                <h3 className="font-semibold text-white">
                   Detailed Proposal
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   You&apos;ll receive a clear, easy-to-understand proposal with
                   side-by-side comparisons so you can choose with confidence.
                 </p>
@@ -113,12 +113,12 @@ export default function ThankYouPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="flex gap-4">
-              <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Calendar className="w-5 h-5 text-green-500" />
+              <div className="w-10 h-10 bg-gold-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Calendar className="w-5 h-5 text-gold-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-brand-800">Get Protected</h3>
-                <p className="text-gray-600">
+                <h3 className="font-semibold text-white">Get Protected</h3>
+                <p className="text-gray-400">
                   Once you choose your plan, we handle all the paperwork. Many
                   clients get coverage in as little as 24-48 hours.
                 </p>
@@ -129,14 +129,14 @@ export default function ThankYouPage() {
 
         {/* Urgency / Value reminder */}
         <motion.div
-          className="bg-brand-50 rounded-2xl p-8 text-center border border-brand-100 mb-10"
+          className="bg-gold-500/10 rounded-2xl p-8 text-center border border-gold-500/20 mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <p className="text-brand-700 font-medium text-lg">
-            💡 Did you know? The average family is underinsured by{" "}
-            <strong>$200,000</strong>. You&apos;ve taken the most important step
+          <p className="text-gold-300 font-medium text-lg">
+            Did you know? The average family is underinsured by{" "}
+            <strong className="text-gold-400">$200,000</strong>. You&apos;ve taken the most important step
             — getting started.
           </p>
         </motion.div>
@@ -144,7 +144,7 @@ export default function ThankYouPage() {
         <div className="text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-medium transition-colors"
           >
             Back to Homepage
             <ArrowRight className="w-4 h-4" />

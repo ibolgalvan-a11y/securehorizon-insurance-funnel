@@ -45,11 +45,11 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-brand-700 via-brand-500 to-brand-600 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-400 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gold-400 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-500 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
@@ -60,7 +60,7 @@ function HeroSection() {
           variants={stagger}
         >
           <motion.div variants={fadeIn} className="mb-6">
-            <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center gap-2 bg-gold-400/15 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gold-300">
               <Shield className="w-4 h-4" />
               Trusted by 10,000+ Families Nationwide
             </span>
@@ -76,7 +76,7 @@ function HeroSection() {
 
           <motion.p
             variants={fadeIn}
-            className="text-xl sm:text-2xl text-blue-100 mb-10 leading-relaxed max-w-2xl"
+            className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl"
           >
             Get personalized insurance and annuity solutions designed around your
             life. No jargon, no pressure — just honest guidance and real
@@ -98,18 +98,18 @@ function HeroSection() {
 
           <motion.div
             variants={fadeIn}
-            className="mt-10 flex flex-col sm:flex-row gap-6 text-blue-100 text-sm"
+            className="mt-10 flex flex-col sm:flex-row gap-6 text-gray-400 text-sm"
           >
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              <CheckCircle2 className="w-5 h-5 text-gold-400" />
               100% Free Consultation
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              <CheckCircle2 className="w-5 h-5 text-gold-400" />
               No Obligation
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              <CheckCircle2 className="w-5 h-5 text-gold-400" />
               Licensed Professionals
             </span>
           </motion.div>
@@ -121,19 +121,19 @@ function HeroSection() {
 
 function TrustBar() {
   return (
-    <div className="bg-gray-50 border-b">
+    <div className="bg-brand-700 border-b border-gold-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm font-medium">
+        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-500 text-sm font-medium">
           <span>As Featured In:</span>
-          <span className="text-gray-500 font-semibold text-lg">Forbes</span>
-          <span className="text-gray-500 font-semibold text-lg">
+          <span className="text-gold-400/70 font-semibold text-lg">Forbes</span>
+          <span className="text-gold-400/70 font-semibold text-lg">
             Insurance Journal
           </span>
-          <span className="text-gray-500 font-semibold text-lg">
+          <span className="text-gold-400/70 font-semibold text-lg">
             Wall Street Journal
           </span>
-          <span className="text-gray-500 font-semibold text-lg">CNBC</span>
-          <span className="text-gray-500 font-semibold text-lg">
+          <span className="text-gold-400/70 font-semibold text-lg">CNBC</span>
+          <span className="text-gold-400/70 font-semibold text-lg">
             Kiplinger
           </span>
         </div>
@@ -171,7 +171,7 @@ function BenefitsSection() {
   ];
 
   return (
-    <section id="benefits" className="section-padding bg-white">
+    <section id="benefits" className="section-padding bg-brand-800">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -180,10 +180,10 @@ function BenefitsSection() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Why Thousands of Families Trust Us
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             We don&apos;t just sell policies — we build personalized strategies
             that protect your family and grow your wealth.
           </p>
@@ -200,15 +200,15 @@ function BenefitsSection() {
             <motion.div
               key={benefit.title}
               variants={fadeIn}
-              className="glass-card p-8 text-center hover:shadow-2xl transition-shadow duration-300 group"
+              className="bg-brand-700/50 backdrop-blur-sm rounded-2xl shadow-xl border border-gold-500/10 p-8 text-center hover:border-gold-500/30 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-100 transition-colors">
-                <benefit.icon className="w-8 h-8 text-brand-500" />
+              <div className="w-16 h-16 bg-gold-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold-500/20 transition-colors">
+                <benefit.icon className="w-8 h-8 text-gold-400" />
               </div>
-              <h3 className="text-xl font-bold text-brand-800 mb-3">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {benefit.description}
               </p>
             </motion.div>
@@ -250,7 +250,7 @@ function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section-padding bg-gray-50">
+    <section id="services" className="section-padding bg-gradient-to-b from-brand-900 to-brand-800">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -259,10 +259,10 @@ function ServicesSection() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Solutions for Every Stage of Life
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Whether you&apos;re starting a family, planning for retirement, or
             protecting your business — we have the right solution.
           </p>
@@ -281,19 +281,19 @@ function ServicesSection() {
               variants={fadeIn}
               className={`rounded-2xl p-8 ${
                 service.highlight
-                  ? "bg-brand-500 text-white shadow-2xl scale-105"
-                  : "bg-white shadow-xl"
+                  ? "bg-gold-500 text-brand-900 shadow-2xl shadow-gold-500/20 scale-105"
+                  : "bg-brand-700 text-white shadow-xl border border-gold-500/10"
               }`}
             >
               {service.highlight && (
-                <span className="inline-block bg-gold-400 text-brand-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                <span className="inline-block bg-brand-800 text-gold-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
                   MOST POPULAR
                 </span>
               )}
               <h3 className="text-2xl font-bold mb-1">{service.title}</h3>
               <p
                 className={`text-sm mb-6 ${
-                  service.highlight ? "text-blue-200" : "text-gray-500"
+                  service.highlight ? "text-brand-800/70" : "text-gray-400"
                 }`}
               >
                 {service.subtitle}
@@ -303,12 +303,12 @@ function ServicesSection() {
                   <li key={feature} className="flex items-start gap-3">
                     <CheckCircle2
                       className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        service.highlight ? "text-green-300" : "text-green-500"
+                        service.highlight ? "text-brand-800" : "text-gold-400"
                       }`}
                     />
                     <span
                       className={
-                        service.highlight ? "text-blue-50" : "text-gray-700"
+                        service.highlight ? "text-brand-900/80" : "text-gray-300"
                       }
                     >
                       {feature}
@@ -320,8 +320,8 @@ function ServicesSection() {
                 href="/quote"
                 className={`block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   service.highlight
-                    ? "bg-gold-400 text-brand-800 hover:bg-gold-500"
-                    : "bg-brand-500 text-white hover:bg-brand-600"
+                    ? "bg-brand-800 text-gold-400 hover:bg-brand-900"
+                    : "bg-gold-500 text-brand-900 hover:bg-gold-400"
                 }`}
               >
                 {service.cta} <ArrowRight className="w-4 h-4 inline ml-1" />
@@ -367,7 +367,7 @@ function HowItWorksSection() {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-800">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -376,10 +376,10 @@ function HowItWorksSection() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Getting Started Is Easy
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Four simple steps to protecting your family and securing your
             financial future.
           </p>
@@ -394,16 +394,16 @@ function HowItWorksSection() {
         >
           {steps.map((step) => (
             <motion.div key={step.number} variants={fadeIn} className="relative text-center">
-              <div className="text-6xl font-bold text-brand-100 mb-4">
+              <div className="text-6xl font-bold text-gold-500/20 mb-4">
                 {step.number}
               </div>
-              <div className="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <step.icon className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gold-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <step.icon className="w-7 h-7 text-brand-900" />
               </div>
-              <h3 className="text-lg font-bold text-brand-800 mb-2">
+              <h3 className="text-lg font-bold text-white mb-2">
                 {step.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed">
                 {step.description}
               </p>
             </motion.div>
@@ -440,7 +440,7 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="section-padding bg-brand-800 text-white">
+    <section id="testimonials" className="section-padding bg-brand-900 text-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -452,7 +452,7 @@ function TestimonialsSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Real Stories From Real Families
           </h2>
-          <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Don&apos;t just take our word for it — hear from the families
             we&apos;ve helped protect.
           </p>
@@ -469,7 +469,7 @@ function TestimonialsSection() {
             <motion.div
               key={testimonial.name}
               variants={fadeIn}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+              className="bg-brand-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gold-500/10"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -479,12 +479,12 @@ function TestimonialsSection() {
                   />
                 ))}
               </div>
-              <p className="text-blue-100 leading-relaxed mb-6 italic">
+              <p className="text-gray-300 leading-relaxed mb-6 italic">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div>
-                <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-blue-300 text-sm">{testimonial.role}</p>
+                <p className="font-semibold text-gold-400">{testimonial.name}</p>
+                <p className="text-gray-500 text-sm">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}
@@ -503,7 +503,7 @@ function StatsSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-r from-brand-500 to-brand-600 text-white">
+    <section className="section-padding bg-gradient-to-r from-gold-600 to-gold-500 text-brand-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((stat) => (
@@ -511,7 +511,7 @@ function StatsSection() {
               <div className="text-4xl sm:text-5xl font-bold mb-2">
                 {stat.number}
               </div>
-              <div className="text-blue-200 font-medium">{stat.label}</div>
+              <div className="text-brand-800/70 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -545,7 +545,7 @@ function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="section-padding bg-white">
+    <section id="faq" className="section-padding bg-brand-800">
       <div className="max-w-3xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -554,10 +554,10 @@ function FAQSection() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Common Questions
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-400 text-lg">
             Got questions? We&apos;ve got answers.
           </p>
         </motion.div>
@@ -584,21 +584,21 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   return (
     <motion.div
       variants={fadeIn}
-      className="border border-gray-200 rounded-xl overflow-hidden"
+      className="border border-gold-500/20 rounded-xl overflow-hidden"
     >
       <button
-        className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+        className="w-full flex items-center justify-between p-6 text-left hover:bg-brand-700/50 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-semibold text-brand-800 pr-4">{question}</span>
+        <span className="font-semibold text-white pr-4">{question}</span>
         <ChevronDown
-          className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${
+          className={`w-5 h-5 text-gold-400 flex-shrink-0 transition-transform ${
             isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
       {isOpen && (
-        <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+        <div className="px-6 pb-6 text-gray-400 leading-relaxed">
           {answer}
         </div>
       )}
@@ -608,10 +608,10 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 function FinalCTA() {
   return (
-    <section className="section-padding bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 text-white relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-gold-400 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-white rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gold-500 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-4xl mx-auto text-center">
@@ -629,7 +629,7 @@ function FinalCTA() {
           </motion.h2>
           <motion.p
             variants={fadeIn}
-            className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto"
+            className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto"
           >
             Every day without coverage is a day your family is unprotected. Take
             2 minutes now to start building your safety net — for free.
@@ -643,17 +643,17 @@ function FinalCTA() {
               <ArrowRight className="w-6 h-6" />
             </Link>
           </motion.div>
-          <motion.div variants={fadeIn} className="mt-8 flex flex-wrap justify-center gap-6 text-blue-100 text-sm">
+          <motion.div variants={fadeIn} className="mt-8 flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
             <span className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-4 h-4 text-gold-400" />
               Takes just 2 minutes
             </span>
             <span className="flex items-center gap-2">
-              <Shield className="w-4 h-4" />
+              <Shield className="w-4 h-4 text-gold-400" />
               Your info is 100% secure
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4" />
+              <CheckCircle2 className="w-4 h-4 text-gold-400" />
               No credit card required
             </span>
           </motion.div>
